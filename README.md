@@ -1,5 +1,3 @@
-# medimsight-api-python-client
-
 # About
 This is the Python client library for Medimsight APIs. 
 

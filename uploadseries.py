@@ -35,7 +35,7 @@ from medimsightapiclient import medimsight, subject, study
 
 def main(argv):
     mds = medimsight.medimsight()
-    mds.config(key='../iakey/medimsightKey.xml', ClientID='javier.gonzalez@imageanalysis.org.uk')
+    mds.config(key='pathToYourMedimsightKey.xml', ClientID='clientEmail@')
     mds.getSubjects()
     mds.uploadZipDicom('demodata/4842440351547392.zip')
     sbj = subject.subject(mds, sorted(mds.getSubjects(), key=lambda x:x['fields']['date'], reverse=True)[0]['pk'])

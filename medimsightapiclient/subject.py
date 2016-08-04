@@ -1,4 +1,4 @@
-from httpsigned import *
+import json
 
 class subject:
         def __init__(self, mdsinst, sid):

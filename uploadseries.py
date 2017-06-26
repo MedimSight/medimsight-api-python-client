@@ -52,9 +52,9 @@ def main(argv):
 				'3d_brain_lesions': '3D Brain Lesions',
 				'vol_t1_wl': 'None'}
 				
-	analysisID = appa.launch(appargs)
+    analysisID = appa.launch(appargs)
 	
-	# Check after some time
+	  # Check after some time
     if sorted(sbj.getStudies(), key=lambda x:x['fields']['dateStart'], reverse=True)[0]['fields']['state'] == 4:
         latestAnalysisParams = sbj.getStudiesData(sorted(sbj.getStudies(), key=lambda x:x['fields']['dateStart'], reverse=True)[0]['pk'])
 		

@@ -4,7 +4,7 @@ import subprocess
 import random
 import json
 import subject
-import study
+import analysisapp
 
 class medimsight:
 
@@ -174,7 +174,7 @@ class medimsight:
         return json.loads(self.postCall('subject', {'name' : sname, 'uid' : suid, 'age':sage, 'phone':sphone, 'address':saddress}))
     
     def getSubjectbyID(self, sid):
-        return subject(sid, self)
+        return subject.subject(sid, self)
     
     def getSubjects(self, grpID = 0):
         return json.loads(self.getCall('group', {'grpID' : str(grpID)}))
@@ -235,8 +235,8 @@ class medimsight:
         
         return True
         
-    def getStudies(self, modality = 'allstudies'):
+    def getAnalysis(self, modality = 'allstudies'):
         return json.loads(self.getCall('studies', {'wun' : str(modality)}))
         
-    def getStudybyID(self, sid):
-        return study(sid, self)
+    def getAnalysisbyID(self, sid):
+        return analysisapp.analysisapp(sid, self)

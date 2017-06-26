@@ -1,4 +1,4 @@
-from httpsigned import *
+import json
 
 class subject:
         def __init__(self, mdsinst, sid):
@@ -54,4 +54,4 @@ class subject:
             return json.loads(self.mdsinst.getCall('oldstudies', {'wun':'io', 'study' : str(sID)}))
             
         def getBiomarkers(self):
-            return self.mdsinst.getCall('metatags', {'sbjID' : str(self.sid)})
+            return json.loads(self.mdsinst.getCall('metatags', {'sbjID' : str(self.sid)}))

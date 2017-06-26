@@ -6,6 +6,15 @@ __pycache__/
 # C extensions
 *.so
 
+# Image Extensions
+*.nii.gz
+*.dcm
+*.nii
+*.png
+*.vtk
+*.stl
+*.zip 
+
 # Distribution / packaging
 .Python
 env/
